@@ -1,0 +1,22 @@
+{
+    "blogs":[
+        {
+           "title":"My first Blog",
+           "body":"lorem ipsum...",
+           "author":"rahul",
+           "id":1
+        },
+        {
+           "title":"My first drawing",
+           "body":"lorem ipsum...",
+           "author":"don",
+           "id":2
+        },
+        {
+           "title":"My first cooking",
+           "body":"lorem ipsum...",
+           "author":"batman",
+           "id":3
+        }
+     ]
+}
