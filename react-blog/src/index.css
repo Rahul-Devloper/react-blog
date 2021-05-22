@@ -47,3 +47,15 @@
   color: rgb(211, 136, 136);
   margin-bottom: 8px;
 }
+button{
+  margin: 2px;
+  background-color: salmon;
+  border: 1px salmon solid;
+  padding: 2px;
+  border-radius: 5px;
+}
+button:hover{
+  box-shadow: 1px 3px 5px rgba(226, 141, 200, 0.863);
+  transition: all ease-in-out 0.1s;
+  transform: scale(1.01);
+}
