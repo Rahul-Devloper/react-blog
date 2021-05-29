@@ -1,11 +1,11 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
 import BlogList from './BlogList'
+import useFetch from './useFetch';
 
 const Home = () => {
 
-const [blogs, setBlogs] = useState(null);
-const [isLoading, setIsLoading] = useState(true);
+  const{ data: blogs, isLoading, error} = useFetch('http://localhost:8000/blogs');
 
 
 
@@ -14,21 +14,11 @@ const [isLoading, setIsLoading] = useState(true);
 //     setBlogs(newBlogs);
 // }
 
-useEffect(()=>{
-    setTimeout(()=>{
-        fetch('http://localhost:8000/blogs')
-    .then(res =>{
-        return res.json();
-    })
-    .then(blogData =>{
-        setBlogs(blogData);
-        setIsLoading(false);
-    })
-    },1000)
-}, []);
+
 
     return (
         <div className="home">
+            {error && <h4>{error}</h4>}
             {isLoading && <h1>Please Wait...</h1>}
              {blogs && <BlogList bloglist = {blogs} titlehead = 'All Blogs!' />}
         </div>
