@@ -5,21 +5,19 @@ import { BrowserRouter as Router, Route, Switch } from  'react-router-dom'
 
 function App() {
   return (
-    <div className="App"> 
-     <Navbar />
-     <Router>
-     <div className="content">
-       <Switch>
-         <Route exact path = '/'>
-          <Home />
-         </Route>
-         <Route path = '/create'>
-          <Create />
-         </Route>
-       </Switch>
+      <Router>
+      <div className="App"> 
+       <Navbar />
+     <div className = 'content'>
+     <Switch>
+     <Route path = '/' exact component = { Home }/>
+     <Route path = '/create' exact component = { Create }/>
+     </Switch>
      </div>
+     </div>
+
      </Router>
-    </div>
+     
   );
 }
 
