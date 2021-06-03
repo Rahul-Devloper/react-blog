@@ -1,4 +1,3 @@
-import React from 'react';
 import {useState, useEffect} from 'react';
 
 const useFetch = (url) => {
@@ -8,8 +7,11 @@ const useFetch = (url) => {
     const [error, setError] = useState(null);
 
     useEffect(()=>{
+
+        const abortCont = new AbortController();
+
         setTimeout(()=>{
-            fetch(url)
+            fetch(url, {signal: abortCont.signal})
         .then(res =>{
             if(!res.ok){
                 throw Error('Could not fetch data for that resource'); //throw is used when data shows an error from the server.
@@ -24,10 +26,18 @@ const useFetch = (url) => {
             
         })
         .catch((error)=>{
-            setIsLoading(false);
+            if(error.name === 'AbortError'){
+                console.log('fetch aborted')
+            } 
+            else{
+                setIsLoading(false);
             setError(error.message);
+            } 
+            
         })
         },1000)
+
+        return()=> abortCont.abort();
     }, [url]);
 
     return{ data, isLoading, error}
