@@ -1,22 +1,22 @@
 {
-    "blogs":[
-        {
-           "title":"My first Blog",
-           "body":"What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has? ",
-           "author":"rahul",
-           "id":1
-        },
-        {
-           "title":"My first drawing",
-           "body":"What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?",
-           "author":"don",
-           "id":2
-        },
-        {
-           "title":"My first cooking",
-           "body":"What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?",
-           "author":"batman",
-           "id":3
-        }
-     ]
+  "blogs": [
+    {
+      "title": "nnnn",
+      "body": "nnmnm",
+      "author": "mario",
+      "id": 1
+    },
+    {
+      "title": "abvsd",
+      "body": "dsfnsdfkdsfdsf",
+      "author": "yoshi",
+      "id": 2
+    },
+    {
+      "title": "My first Dance",
+      "body": "I am the greatest dancer of the world",
+      "author": "rahul",
+      "id": 3
+    }
+  ]
 }
